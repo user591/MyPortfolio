@@ -24,6 +24,13 @@ const db = mysql.createConnection({
   database: "portfolio",
 });
 
+// const db = mysql.createConnection({
+//   host: "db.nulzpapkaphhhbxislpu.supabase.co",
+//   user: "postgres",
+//   password: "thisismyportfolio",
+//   database: "postgres",
+// });
+
 db.connect((err) => {
   if (err) throw err;
   console.log("Database connected");
@@ -283,7 +290,7 @@ function sendEmail({ name, email, message, recepient }) {
     from: "messegeportfolio@gmail.com",
     to: recepient,
     subject: "New Contact Form Submission",
-    text: `You have a new contact form submission\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    text: `YOU'RE GETTING A NEW MESSAGE!\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
   transporter.sendMail(mailOptions, (err, info) => {
