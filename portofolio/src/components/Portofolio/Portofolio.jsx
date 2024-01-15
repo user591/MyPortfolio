@@ -12,7 +12,6 @@ function Portofolio() {
     const getData = async () => {
       try {
         const res = await axios.get("http://localhost:4000/portofolio");
-        console.log(res.data);
         setData(res.data);
       } catch (err) {
         console.log(err);
